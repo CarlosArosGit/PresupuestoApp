@@ -1,0 +1,74 @@
+.cardVerde {
+    background-color: rgba(0, 128, 0, 0.174);
+    border: 1px solid rgba(0, 128, 0, 0.884);
+    text-align: initial;
+    padding: 20px;
+    border-radius: 25px;
+    width: 100%;
+    height: 200px;
+}
+
+.btnPresupuesto,
+.btnPresupuesto:hover {
+    background-color: rgba(0, 128, 0, 0.174);
+    border: 0.5px solid rgba(0, 128, 0, 0.884);
+    margin-top: 5px;
+    color: rgba(0, 128, 0, 0.884);
+}
+
+#inputPresupuesto {
+    background-color: rgba(0, 128, 0, 0.174);
+    border: 0.5px solid rgba(107, 128, 107, 0.884);
+    margin-top: 20px;
+}
+
+.cardRoja {
+    background-color: rgba(255, 0, 0, 0.221);
+    border: 1px solid rgba(255, 0, 0, 0.829);
+    text-align: initial;
+    border-radius: 25px;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+}
+
+.btnGasto,
+.btnGasto:hover {
+    background-color: rgba(255, 0, 0, 0.221);
+    border: 1px solid rgba(255, 0, 0, 0.829);
+    margin-top: 5px;
+    color: rgba(255, 0, 0, 0.829);
+}
+
+#inputCantidadGasto,
+#inputNombreGasto {
+    background-color: rgba(255, 0, 0, 0.221);
+    border: 0.5px solid rgba(134, 87, 87, 0.829);
+    margin-top: 20px;
+}
+
+.detalle {
+    margin-top: 10rem;
+}
+
+.w600 {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    .detalle {
+        margin-top: 1rem;
+    }
+
+    .cardRoja {
+        height: 396px;
+    }
+
+    .cardVerde {
+        height: 220px;
+    }
+
+    h5 {
+        font-size: 16px !important;
+    }
+}
