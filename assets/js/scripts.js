@@ -75,23 +75,22 @@ function agregarGasto(valor) {
 
 function mostrarGastosTabla() {
   contenido.innerHTML = '';
-  for (let item of gastos) {
-    let namename = `${item.nombre}`;
-    let valorValor = `${item.valor}`;
+  for (let i=0; i<gastos.length; i++){
     contenido.innerHTML +=
-      `<tr id="${item.nombre}${item.valor}">
-        <td>${item.nombre}</td>
-        <td>$${item.valor}</td>
-        <td><div class="text-primary me-2 btn" onclick="borrarfila('${namename}',${valorValor})" ><i class="bi bi-trash-fill"></i></div></td>
+      `<tr id="${i}">
+        <td>${gastos[i].nombre}</td>
+        <td>$${gastos[i].valor}</td>
+        <td><div class="text-primary me-2 btn" onclick="borrarfila(${i},${gastos[i].valor})" ><i class="bi bi-trash-fill"></i></div></td>
        </tr>`;
   }
 }
 
-function borrarfila(name, valorValor) {
-  let idTr = name + valorValor.toString();
-  document.getElementById(idTr).remove();
-  gastos = gastos.filter(value => value != gastos[gastos.length - 1]);
+function borrarfila(id, valorValor) {
+  document.getElementById(`${id}`).remove();
+  gastos = gastos.filter(value => value != gastos[id]);
+  console.log(gastos.length);
   gas = parseInt(gastosP.innerText) - parseInt(valorValor);
   gastosP.innerText = gas;
   saldoP.innerHTML = parseInt(saldoP.innerHTML) + parseInt(valorValor);
+  mostrarGastosTabla();
 }
